@@ -3,6 +3,7 @@ import 'package:swm_miniproject_flutter/common/values/app_colors.dart';
 import 'package:swm_miniproject_flutter/modules/home/controllers/home_controller.dart';
 import 'package:get/get.dart';
 import 'package:swm_miniproject_flutter/modules/widgets/custom_app_bar.dart';
+import 'package:swm_miniproject_flutter/modules/widgets/group_tile.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
@@ -14,14 +15,21 @@ class HomeView extends GetView<HomeController> {
         onSearchPressed: controller.onSearchPressed,
         onProfilePressed: controller.onProfilePressed,
       ),
-      body: SizedBox.expand(
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-            return Container(
-              height: 100,
-              color: Colors.red,
+      body: Container(
+        color: AppColors.kPrimaryColor,
+        child: Obx(
+          () {
+            return ListView.builder(
+              itemCount: controller.dataList.length,
+              itemBuilder: (context, index) {
+                return GroupTile(
+                  index: index,
+                  data: controller.dataList[index],
+                  isParticipated: true
+                );
+              },
             );
-          },
+          }
         ),
       ),
     );

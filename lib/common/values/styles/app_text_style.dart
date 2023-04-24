@@ -96,22 +96,22 @@ abstract class AppTextStyle {
   );
 
   static final TextStyle indexStyle = boldStyle.copyWith(
-      fontSize: Dimens.fontSize16,
+      fontSize: Dimens.fontSize13,
       color: const Color(0xFFCECECE)
   );
 
-  static final TextStyle titleStyle = boldStyle.copyWith(
-      fontSize: Dimens.fontSize14,
+  static final TextStyle titleStyle = regularStyle.copyWith(
+      fontSize: Dimens.fontSize10,
       color: AppColors.white
   );
 
-  static final TextStyle groupLimitCaptionStyle = boldStyle.copyWith(
-      fontSize: Dimens.fontSize14,
+  static final TextStyle groupLimitCaptionStyle = regularStyle.copyWith(
+      fontSize: Dimens.fontSize10,
       color: const Color(0xFFBCBCBC)
   );
 
-  static final TextStyle timeLeftCaptionStyle = boldStyle.copyWith(
-      fontSize: Dimens.fontSize10,
+  static final TextStyle timeLeftCaptionStyle = regularStyle.copyWith(
+      fontSize: Dimens.fontSize8,
       color: const Color(0xFFBCBCBC)
   );
 
