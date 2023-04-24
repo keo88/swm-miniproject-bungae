@@ -19,4 +19,7 @@ class HomeController extends GetxController {
   void onSearchPressed() {
 
   }
+
+  void onProfilePressed() {
+  }
 }
