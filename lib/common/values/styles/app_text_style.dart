@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swm_miniproject_flutter/common/values/app_colors.dart';
 
 import 'dimens.dart';
 
@@ -92,6 +93,26 @@ abstract class AppTextStyle {
   static final TextStyle overline = regularStyle.copyWith(
     fontSize: Dimens.fontSize10,
     letterSpacing: 1.5,
+  );
+
+  static final TextStyle indexStyle = boldStyle.copyWith(
+      fontSize: Dimens.fontSize16,
+      color: const Color(0xFFCECECE)
+  );
+
+  static final TextStyle titleStyle = boldStyle.copyWith(
+      fontSize: Dimens.fontSize14,
+      color: AppColors.white
+  );
+
+  static final TextStyle groupLimitCaptionStyle = boldStyle.copyWith(
+      fontSize: Dimens.fontSize14,
+      color: const Color(0xFFBCBCBC)
+  );
+
+  static final TextStyle timeLeftCaptionStyle = boldStyle.copyWith(
+      fontSize: Dimens.fontSize10,
+      color: const Color(0xFFBCBCBC)
   );
 
   static final TextStyle lightStyle = _textStyle.copyWith(
