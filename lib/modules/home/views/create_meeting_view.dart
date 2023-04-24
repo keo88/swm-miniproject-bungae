@@ -26,11 +26,20 @@ class CreateMeetingView extends GetView<CreateMeetingController> {
             TextField(
               controller: controller.nameController,
               decoration: InputDecoration(
+                enabledBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFFA9A9A9)),
+                ),
+                focusedBorder: const UnderlineInputBorder(
+                  borderSide: BorderSide(color: Color(0xFFA9A9A9)),
+                ),
                 border: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Color(0xFFA9A9A9)),
                 ),
                 labelText: '모임의 이름을 작성해주세요 (30자 이내)',
                 labelStyle: AppTextStyle.meetingNameStyle,
+              ),
+              style: AppTextStyle.meetingNameStyle.copyWith(
+                fontSize: 26,
               ),
             ),
             const SizedBox(height: 10),
