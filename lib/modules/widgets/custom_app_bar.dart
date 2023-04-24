@@ -29,7 +29,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: IconButton(
             onPressed: onProfilePressed,
             icon: const CircleAvatar(
-                radius: 14,
+                radius: 16,
                 backgroundColor: Color(0xFF383838),
                 child: Icon(Icons.person, color: AppColors.white)
             ),
