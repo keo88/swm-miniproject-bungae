@@ -6,7 +6,8 @@ import 'package:swm_miniproject_flutter/routes/app_pages.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
-  const CustomBottomNavigationBar({Key? key, required this.currentIndex}) : super(key: key);
+  final bool isNotOnMainPage;
+  const CustomBottomNavigationBar({Key? key, required this.currentIndex, this.isNotOnMainPage = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +29,11 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          if (index == currentIndex) return;
+          if (!isNotOnMainPage && index == currentIndex) return;
           if (index == 0) {
-            Get.offNamed(Routes.HOME);
+            Get.offAllNamed(Routes.HOME);
           } else if (index == 1) {
-            Get.offNamed(Routes.EXPLORE);
+            Get.offAllNamed(Routes.EXPLORE);
           }
         },
       ),

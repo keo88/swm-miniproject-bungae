@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:swm_miniproject_flutter/common/data/enums/group_type_enum.dart';
 import 'package:swm_miniproject_flutter/common/data/models/meeting_model.dart';
 import 'package:swm_miniproject_flutter/modules/home/controllers/meeting_controller.dart';
+import 'package:swm_miniproject_flutter/routes/app_pages.dart';
 
 class HomeController extends MeetingController {
 
@@ -70,10 +71,11 @@ class HomeController extends MeetingController {
 
   @override
   void onSearchPressed() {
-
+    Get.toNamed(Routes.CREATE_MEETING);
   }
 
   @override
   void onProfilePressed() {
+    Get.toNamed(Routes.CREATE_MEETING);
   }
 }

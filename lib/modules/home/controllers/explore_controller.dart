@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:swm_miniproject_flutter/common/data/enums/group_type_enum.dart';
 import 'package:swm_miniproject_flutter/common/data/models/meeting_model.dart';
 import 'package:swm_miniproject_flutter/modules/home/controllers/meeting_controller.dart';
+import 'package:swm_miniproject_flutter/routes/app_pages.dart';
 
 class ExploreController extends MeetingController {
 
@@ -45,7 +46,7 @@ class ExploreController extends MeetingController {
   ]);
 
   @override
-  List<String> get tabList => ['나의 모임', '과거 모임'];
+  List<String> get tabList => ['진행중', '완료된 모임'];
 
   @override
   RxList<MeetingData> get dataList => _dataList;
@@ -73,11 +74,12 @@ class ExploreController extends MeetingController {
 
   @override
   void onSearchPressed() {
-
+    Get.toNamed(Routes.CREATE_MEETING);
   }
 
   @override
   void onProfilePressed() {
+    Get.toNamed(Routes.CREATE_MEETING);
   }
 
 }

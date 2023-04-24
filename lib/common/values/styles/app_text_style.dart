@@ -115,6 +115,10 @@ abstract class AppTextStyle {
       color: const Color(0xFFBCBCBC)
   );
 
+  static final meetingNameStyle = semiBoldStyle.copyWith(
+      fontSize: 20,
+      color: const Color(0xFFA9A9A9)
+  );
 
   static final TextStyle tabBarStyle = semiBoldStyle.copyWith(
       fontSize: 18,
