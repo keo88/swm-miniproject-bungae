@@ -18,6 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.kPrimaryColor,
+      elevation: 0.0,
       leading: IconButton(
           onPressed: onSearchPressed,
           icon: const Icon(Icons.search)

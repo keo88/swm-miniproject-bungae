@@ -4,7 +4,7 @@ import 'package:swm_miniproject_flutter/common/data/enums/group_type_enum.dart';
 import 'package:swm_miniproject_flutter/common/data/models/meeting_model.dart';
 import 'package:swm_miniproject_flutter/modules/home/controllers/meeting_controller.dart';
 
-class HomeController extends MeetingController {
+class ExploreController extends MeetingController {
 
   final RxList<MeetingData> _dataList = RxList([
     MeetingData(
@@ -50,7 +50,7 @@ class HomeController extends MeetingController {
   @override
   RxList<MeetingData> get dataList => _dataList;
   @override
-  bool get isParticipated => true;
+  bool get isParticipated => false;
 
   @override
   void onInit() {
@@ -68,6 +68,9 @@ class HomeController extends MeetingController {
     super.onClose();
   }
 
+  void getPosts() {
+  }
+
   @override
   void onSearchPressed() {
 
@@ -76,4 +79,5 @@ class HomeController extends MeetingController {
   @override
   void onProfilePressed() {
   }
+
 }

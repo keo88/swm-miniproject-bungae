@@ -30,8 +30,12 @@ class GroupTile extends StatelessWidget {
         action = '나가기';
         color = AppColors.alertColor;
       } else {
-        action = '참여하기';
-        color = AppColors.kPrimaryColor;
+        if (data.currentCount < data.maxCount) {
+          action = '참여하기';
+          color = AppColors.infoColor;
+        } else {
+          action = '마감';
+        }
       }
     }
 
@@ -51,8 +55,8 @@ class GroupTile extends StatelessWidget {
           Text(index.toString(), style: AppTextStyle.indexStyle),
           SizedBox(width: 5.w),
           SizedBox(
-            width: 50,
-            height: 50,
+            width: 50.w,
+            height: 50.h,
             child: Image.asset(
               GroupImageBinder.getGroupImagePath(data.meetingType),
             ),

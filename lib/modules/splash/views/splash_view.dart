@@ -21,7 +21,9 @@ class SplashView extends GetView<SplashController> {
             Image.asset('assets/images/Bungae-Logo.png'),
             Text(
               '번개모임',
-              style: AppTextStyle.headline6,
+              style: AppTextStyle.headline6.copyWith(
+                color: AppColors.white,
+              ),
             ),
           ],
         ),

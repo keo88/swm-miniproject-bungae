@@ -91,28 +91,34 @@ abstract class AppTextStyle {
   /// NAME         SIZE  WEIGHT  SPACING
   /// overline     10.0  regular  1.5
   static final TextStyle overline = regularStyle.copyWith(
-    fontSize: Dimens.fontSize10,
+    fontSize: 14,
     letterSpacing: 1.5,
   );
 
   static final TextStyle indexStyle = boldStyle.copyWith(
-      fontSize: Dimens.fontSize13,
+      fontSize: 20,
       color: const Color(0xFFCECECE)
   );
 
   static final TextStyle titleStyle = regularStyle.copyWith(
-      fontSize: Dimens.fontSize10,
+      fontSize: 16,
       color: AppColors.white
   );
 
   static final TextStyle groupLimitCaptionStyle = regularStyle.copyWith(
-      fontSize: Dimens.fontSize10,
+      fontSize: 14,
       color: const Color(0xFFBCBCBC)
   );
 
   static final TextStyle timeLeftCaptionStyle = regularStyle.copyWith(
-      fontSize: Dimens.fontSize8,
+      fontSize: 11,
       color: const Color(0xFFBCBCBC)
+  );
+
+
+  static final TextStyle tabBarStyle = semiBoldStyle.copyWith(
+      fontSize: 18,
+      color: AppColors.white
   );
 
   static final TextStyle lightStyle = _textStyle.copyWith(

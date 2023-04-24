@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:swm_miniproject_flutter/modules/home/bindings/explore_binding.dart';
+import 'package:swm_miniproject_flutter/modules/home/views/explore_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -22,6 +24,11 @@ abstract class AppPages {
       name: _Paths.SPLASH,
       page: () => const SplashView(),
       binding: SplashBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXPLORE,
+      page: () => const ExploreView(),
+      binding: ExploreBinding(),
     ),
   ];
 }
